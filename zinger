@@ -1,0 +1,2 @@
+zenity --info --title="Zinger" --width=750 --text="(`ping -c 3 $(zenity  --forms --title="Zinger" --text=" What site to ping?" --add-entry=Website )`)"
+

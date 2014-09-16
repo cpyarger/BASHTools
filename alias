@@ -1,0 +1,28 @@
+# Fri 22 Feb 2013 07:55:16 AM EST 
+# aliases flint cannot live without 
+alias ld='ls -alt | grep $(date +%F)'                          # list todays files
+alias ly='ls -alt | grep $(date --date=yesterday +%F)'         # list yesterdays files
+alias dq='du -h --max-depth=1'                                 # disk usage
+alias sc='egrep -v "^[[:space:]]*(#.*)?$"'                     # sans comment
+alias ldir='ls -d */'                                          # list directories
+alias ssh='ssh -X '                                            # always invoke X client in ssh
+
+# Mon 28 Jan 2013 02:08:33 PM EST 
+# pflint.  Editor sanity...
+export VISUAL=/usr/bin/vi
+export EDITOR=/usr/bin/vi
+
+# aliases chris loves
+
+alias k9="kill -9"
+alias pa="ps aux"
+alias pag="ps aux|grep"
+
+function bkp(){
+mkdir obe
+file=$1
+time=$(date +%s )
+cp $file obe/$file.$time
+echo "coppied $file to obe/$file.$time"
+
+}
